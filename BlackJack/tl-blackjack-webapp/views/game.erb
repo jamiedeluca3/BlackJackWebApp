@@ -1,0 +1,22 @@
+<h3>Welcome to Blackjack <%= session[:player_name] %>.</h3>
+
+Dealer cards:
+<% session[:dealer_cards].each do |card| %>
+  <%= card.to_s %>
+<% end %>
+<br>
+Total: <%= calculate_total(session[:dealer_cards]) %>
+
+<br><br>
+
+<%= session[:player_name] %> cards:
+<% session[:player_cards].each do |card| %>
+  <%= card.to_s %>
+<% end %>
+<br>
+Total: <%= calculate_total(session[:player_cards]) %>
+
+<!--
+# Form needed for hit or stay
+-->
+
